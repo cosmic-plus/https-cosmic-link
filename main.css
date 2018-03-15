@@ -13,8 +13,9 @@ body
 
 header
 {
-	overflow: hidden;
 	top: 0;
+	max-width: 100%
+	overflow: hidden;
 	font-style: italic;
 	color: dimgrey;
 }
