@@ -6,8 +6,6 @@
 
 body
 {
-	max-width: 100%;
-	overflow-x: hidden;
 	background-color: aliceblue;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size: 1.2em;
@@ -15,6 +13,7 @@ body
 
 header
 {
+	overflow: hidden;
 	top: 0;
 	font-style: italic;
 	color: dimgrey;
@@ -60,7 +59,7 @@ header span
 	overflow: hidden;
 	background-color: white;
 	-webkit-box-shadow: 0.1em 0.1em 0.3em darkgrey;
-			box-shadow: 0.1em 0.1em 0.3em darkgrey; 
+			box-shadow: 0.1em 0.1em 0.3em darkgrey;
 }
 
 .content
