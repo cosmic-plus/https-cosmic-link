@@ -46,7 +46,9 @@
 			<hr>
 			<span class="step">Step 1: Check the transaction</span>
 			<p>
-				<div id="CL_transactionNode">No transaction.</div>
+				<div id="CL_transactionNode">
+					Loading... <span class="CL_loadingAnim"></span>
+				</div>
 			</p>
 			<hr>
 			<span class="step">Step 2: Select an authenticator service</span>
@@ -124,10 +126,10 @@
 		</div>
 	</div>
 
+	<link rel="stylesheet" type="text/css" href="cosmic-lib/cosmic-lib.css">
 	<script src="bower-js-stellar-sdk/stellar-sdk.js"></script>
 	<script src="cosmic-lib/cosmic-lib.js"></script>
 	<script src="qrcodejs/qrcode.js"></script>
 	<script src="main.js"></script>
-	<link rel="stylesheet" type="text/css" href="cosmic-lib/cosmic-lib.css">
 </body>
 </html>

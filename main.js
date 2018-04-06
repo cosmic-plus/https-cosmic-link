@@ -7,13 +7,17 @@ function start()
   setTamper()
 
   if(location.search.length > 2) {
-  coslink = new CosmicLink(document.URL)
+    coslink = new CosmicLink(document.URL)
 
     coslink.getQuery().then(function(query){
       node.append(node.grab("query"), "/" + query)
     })
 
     refreshQR()
+  } else {
+    var transactionNode = node.grab("CL_transactionNode")
+    node.clear(transactionNode)
+    node.append(transactionNode, "No transaction.")
   }
 }
 
