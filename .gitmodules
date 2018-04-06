@@ -1,6 +1,3 @@
-[submodule "cosmic-lib"]
-	path = cosmic-lib
-	url = https://github.com/MisterTicot/cosmic-lib
 [submodule "qrcodejs"]
 	path = qrcodejs
 	url = https://github.com/davidshimjs/qrcodejs
