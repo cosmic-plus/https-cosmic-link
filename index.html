@@ -1,4 +1,5 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
 
 	<script>
@@ -24,11 +25,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Cosmic.Link</title>
-	<link rel="stylesheet" type="text/css" href="reset.css" />
-	<link rel="stylesheet" type="text/css" href="main.css" />
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
-<body id="body" onload="start()" />
+<body id="body" onload="start()">
 
 	<div id="shadow" onclick="popup.hide()"></div>
 
@@ -38,7 +39,6 @@
 		<h1>Cosmic.Link</h1><span id="query"></span>
 	</header>
 		
-
 	<div id="page" class="page">
 		<div id="main" class="content">
 			<h2>You're being proposed to sign a Stellar transaction.</h2>
@@ -47,9 +47,6 @@
 			<span class="step">Step 1: Check the transaction</span>
 			<p>
 				<div id="CL_transactionNode">No transaction.</div>
-				<div id="CL_statusNode">
-					<div id="CL_errorNode"></div>
-				</div>
 			</p>
 			<hr>
 			<span class="step">Step 2: Select an authenticator service</span>
@@ -78,7 +75,7 @@
 
 	<div id="hidden">
 		<div id="explanation" class="content">
-			<p><a href="javascript:switchPage(explanation, main)" class="back"><< Back</a></p>
+			<p><a href="javascript:switchPage(explanation, main)" class="back">&lt;&lt; Back</a></p>
 			<h2>Warm welcome to the Stellar network !</h2>
 			<p>
 				The Stellar network is a cryptocurrency platform on which we can
@@ -131,6 +128,6 @@
 	<script src="cosmic-lib/cosmic-lib.js"></script>
 	<script src="qrcodejs/qrcode.js"></script>
 	<script src="main.js"></script>
-	<link rel="stylesheet" type="text/css" href="cosmic-lib/cosmic-lib.css"></link>
+	<link rel="stylesheet" type="text/css" href="cosmic-lib/cosmic-lib.css">
 </body>
 </html>
