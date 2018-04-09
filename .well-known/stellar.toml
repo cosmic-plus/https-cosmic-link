@@ -1,2 +1,1 @@
-# Federation service provided by StellarID.io
-FEDERATION_SERVER="https://stellarid.io/federation/"
+FEDERATION_SERVER="https://lumenbox.org/federation"
