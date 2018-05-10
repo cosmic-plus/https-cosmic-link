@@ -2,134 +2,133 @@
 <html lang="en">
 <head>
 
-	<script>
-		/*** Immediate redirection if requested by user ***/
-		var authenticators = {
-			stellarAuthenticator: "https://stellar-authenticator.org/"
-		}
+  <script>
+    /*** Immediate redirection if requested by user ***/
+    var authenticators = {
+      stellarAuthenticator: "https://stellar-authenticator.org/"
+    }
 
-		function getAuthenticatorUrl(){
-			if(!localStorage.authenticator) localStorage.authenticator = "stellarAuthenticator"
-			return authenticators[localStorage.authenticator]
-		}
-	
-		function redirect(){
-			location.href = getAuthenticatorUrl() + location.search
-			return false
-		}
+    function getAuthenticatorUrl(){
+      if(!localStorage.authenticator) localStorage.authenticator = "stellarAuthenticator"
+      return authenticators[localStorage.authenticator]
+    }
 
-		if(localStorage.redirect == "true" && location.search.length > 2)
-			redirect()
-	</script>		
+    function redirect(){
+      location.href = getAuthenticatorUrl() + location.search
+      return false
+    }
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Cosmic.Link</title>
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
+    if(localStorage.redirect == "true" && location.search.length > 2)
+      redirect()
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cosmic.Link</title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body id="body" onload="start()">
 
-	<div id="shadow" onclick="popup.hide()"></div>
+  <div id="shadow" onclick="popup.hide()"></div>
 
-	<img id="tamper">
-	
-	<header>
-		<h1>Cosmic.Link</h1><span id="query"></span>
-	</header>
-		
-	<div id="page" class="page">
-		<div id="main" class="content">
-			<h2>You're being proposed to sign a Stellar transaction.</h2>
-			<aside><a href="javascript:switchPage(main, explanation)">What does that means?</a></aside>
-			<hr>
-			<span class="step">Step 1: Check the transaction</span>
-			<p>
-				<div id="CL_transactionNode">
-					Loading... <span class="CL_loadingAnim"></span>
-				</div>
-			</p>
-			<hr>
-			<span class="step">Step 2: Select an authenticator service</span>
-			<form>
-				<select id="authenticators" onchange="selectAuthenticator()">
-					<option value="stellarAuthenticator">Stellar Authenticator</option>
-				</select>
-			</form>
-			<hr>
-			<span class="step">Step 3: Go & sign the transaction</span>
-			<form onsubmit="return redirect()">
-				<input type="submit" value="Sign in my browser">
-				<span id="redirect" onClick="javascript:switchRedirection()">
-					<span id="checkbox">✘</span> Automatic redirection
-				</span>
-			</form>
+  <img id="tamper">
 
-			<form>
-				<div id="qrcode">
-					<input type="button" value="Sign on my phone" onClick="switchQR()">
-					<div id="QR"></div>
-				</div>
-			</form>
-		</div>
-	</div>
+  <header>
+    <h1>Cosmic.Link</h1><span id="query"></span>
+  </header>
 
-	<div id="hidden">
-		<div id="explanation" class="content">
-			<p><a href="javascript:switchPage(explanation, main)" class="back">&lt;&lt; Back</a></p>
-			<h2>Warm welcome to the Stellar network !</h2>
-			<p>
-				The Stellar network is a cryptocurrency platform on which we can
-				create accounts and perform transactions. It's a bit like a bank,
-				except it's public and decentralized.
-			</p>
-			<p>
-				Because it's public, each of us can contribute to the network by
-				various means, like programing services such as this one. We can
-				also emit our own currencies or tokens, build secure voting systems
-				and other things to be invented. :)
-			</p>
-			<p>
-				Because it's properly decentralized, it's protected from anybody
-				that could want to disrupt or hijack the network for its own
-				benefit. Our funds are secured by cryptographic algorithms and
-				resilience. Resilience means that several nodes on the network
-				have a full copy of the datas, and that the various independant
-				nodes have to agree together for the transactions to be performed.
-			</p>
-			<p>
-				In order to sign a Stellar transaction, you need to have an
-				account with a minimum amount of the native currency, called
-				lumen (XLM). At this time, the minimum amount is 1 lumen, valued
-				between $.30 and $.50. Once in, you'll be able to close your
-				account and get your money back at any time, if you wish to do so.
-			</p>
-			<p>
-				Cosmic links are normal web links that describe a Stellar
-				transaction. When you click on them and own a Stellar account,
-				you're given the possibility to sign and send the transaction to
-				the network. Those transactions are for payment but also for
-				currency conversion, change in account settings or sending short
-				messages. Cosmic links may looks like:
-				https://cosmic.link/?setOption&...
-			</p>
-			<p>
-				The Stellar network and core programs are maintained by the Stellar
-				Fundation. Their <a href="https://stellar.org">website</a> is a good
-				place to start if you want to learn more. <br />
-				We also have a <a href="https://galactictalk.org">community forum</a>.
-			</p>
-			<p>
-				We wish you a happy discovery :)
-			</p>
-		</div>
-	</div>
+  <div id="page" class="page">
+    <div id="main" class="content">
+      <h2>You're being proposed to sign a Stellar transaction.</h2>
+      <aside><a href="javascript:switchPage(main, explanation)">What does that means?</a></aside>
+      <hr>
+      <span class="step">Step 1: Check the transaction</span>
+      <p>
+        <div id="CL_transactionNode">
+          Loading... <span class="CL_loadingAnim"></span>
+        </div>
+      </p>
+      <hr>
+      <span class="step">Step 2: Select an authenticator service</span>
+      <form>
+        <select id="authenticators" onchange="selectAuthenticator()">
+          <option value="stellarAuthenticator">Stellar Authenticator</option>
+        </select>
+      </form>
+      <hr>
+      <span class="step">Step 3: Go & sign the transaction</span>
+      <form onsubmit="return redirect()">
+        <input type="submit" value="Sign in my browser">
+        <span id="redirect" onClick="javascript:switchRedirection()">
+          <span id="checkbox">✘</span> Automatic redirection
+        </span>
+      </form>
 
-	<link rel="stylesheet" type="text/css" href="cosmic-lib/cosmic-lib.css">
-	<script src="bower-js-stellar-sdk/stellar-sdk.min.js"></script>
-	<script src="cosmic-lib/cosmic-lib.js"></script>
-	<script src="qrcodejs/qrcode.min.js"></script>
-	<script src="main.js"></script>
+      <form>
+        <div id="qrcode">
+          <input type="button" value="Sign on my phone" onClick="switchQR()">
+          <div id="QR"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="hidden">
+    <div id="explanation" class="content">
+      <p><a href="javascript:switchPage(explanation, main)" class="back">&lt;&lt; Back</a></p>
+      <h2>Warm welcome to the Stellar network !</h2>
+      <p>
+        The Stellar network is a cryptocurrency platform on which we can
+        create accounts and perform transactions. It's a bit like a bank,
+        except it's public and decentralized.
+      </p>
+      <p>
+        Because it's public, each of us can contribute to the network by
+        various means, like programing services such as this one. We can
+        also emit our own currencies or tokens, build secure voting systems
+        and other things to be invented. :)
+      </p>
+      <p>
+        Because it's properly decentralized, it's protected from anybody
+        that could want to disrupt or hijack the network for its own
+        benefit. Our funds are secured by cryptographic algorithms and
+        resilience. Resilience means that several nodes on the network
+        have a full copy of the datas, and that the various independant
+        nodes have to agree together for the transactions to be performed.
+      </p>
+      <p>
+        In order to sign a Stellar transaction, you need to have an
+        account with a minimum amount of the native currency, called
+        lumen (XLM). At this time, the minimum amount is 1 lumen, valued
+        between $.30 and $.50. Once in, you'll be able to close your
+        account and get your money back at any time, if you wish to do so.
+      </p>
+      <p>
+        Cosmic links are normal web links that describe a Stellar
+        transaction. When you click on them and own a Stellar account,
+        you're given the possibility to sign and send the transaction to
+        the network. Those transactions are for payment but also for
+        currency conversion, change in account settings or sending short
+        messages. Cosmic links may looks like:
+        https://cosmic.link/?setOption&...
+      </p>
+      <p>
+        The Stellar network and core programs are maintained by the Stellar
+        Fundation. Their <a href="https://stellar.org">website</a> is a good
+        place to start if you want to learn more. <br />
+        We also have a <a href="https://galactictalk.org">community forum</a>.
+      </p>
+      <p>
+        We wish you a happy discovery :)
+      </p>
+    </div>
+  </div>
+
+  <script src="bower-js-stellar-sdk/stellar-sdk.min.js"></script>
+  <script src="cosmic-lib/cosmic-lib.js"></script>
+  <script src="qrcodejs/qrcode.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
