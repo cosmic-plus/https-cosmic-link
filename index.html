@@ -14,7 +14,7 @@
     }
 
     function redirect(){
-      location.href = getAuthenticatorUrl() + location.search
+      location.replace(getAuthenticatorUrl() + location.search)
       return false
     }
 
