@@ -18,21 +18,20 @@
       return false
     }
 
-    if(localStorage.redirect == "true" && location.search.length > 2)
-      redirect()
+    if (localStorage.redirect == "true" && location.search.length > 1) redirect()
+    else history.replaceState({}, '', '/' + location.search)
   </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <title>Cosmic.Link</title>
-  <meta name="description" content="You're being offered to sign a Stellar transaction">
+  <title>Cosmic.Link ~ Stellar transactions over URL</title>
+  <meta name="description" content="Cosmic.Link provides a convenient way to
+  share Stellar transactions as URLs.">
   <link rel="stylesheet" type="text/css" href="reset.css">
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body id="body" onload="start()">
-
-  <div id="shadow" onclick="popup.hide()"></div>
 
   <img id="tamper">
 
