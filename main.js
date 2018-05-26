@@ -6,7 +6,7 @@ function start()
   refreshRedirection()
   setTamper()
 
-  if(location.search.length > 2) {
+  if(location.search.length > 1) {
     coslink = new CosmicLink(document.URL)
 
     coslink.getQuery().then(function(query){
@@ -15,7 +15,7 @@ function start()
 
     refreshQR()
   } else {
-    var transactionNode = node.grab("CL_transactionNode")
+    var transactionNode = node.grab("CL_htmlNode")
     node.clear(transactionNode)
     node.append(transactionNode, "No transaction.")
   }
