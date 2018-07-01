@@ -30,4 +30,12 @@ const main = Object.assign({}, config, {
   }
 })
 
-module.exports = [ main ]
+const worker = Object.assign({}, config, {
+  entry: './src/worker.js',
+  output: {
+    path: __dirname,
+    filename: 'worker.js',
+  }
+})
+
+module.exports = [ main, worker ]
