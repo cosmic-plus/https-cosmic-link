@@ -12,7 +12,7 @@
     "build-js": "webpack -p",
     "build": "for i in css html js; do npm run build-$i; done",
     "watch": "webpack -d --watch",
-    "serve": "npm run watch & live-server --ignore='**/node_modules/**,**/src/**,**/docs/**'"
+    "serve": "npm run watch & live-server --no-browser --ignore='**/node_modules/**,**/src/**,**/docs/**'"
   },
   "browserlist": "last 4 versions, > 0.1%",
   "keywords": [],
