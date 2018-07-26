@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "standard --fix 'src/**.js'",
+    "get-src": "git submodule update --init",
     "build-doc": "jsdoc -c jsdoc.json",
     "build-css": "cat src/*.css | autoprefixer-cli -o main.css",
     "build-html": "cp -f src/*.html .",
     "build-js": "webpack -p",
     "build": "for i in css html js; do npm run build-$i; done",
+    "check": "npm ci && npm run get-src && npm run build && git status",
     "watch": "webpack -d --watch",
     "serve": "npm run watch & live-server --no-browser --ignore='**/node_modules/**,**/src/**,**/docs/**'"
   },
