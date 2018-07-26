@@ -25,8 +25,16 @@ const main = Object.assign({}, config, {
   output: {
     path: __dirname,
     filename: 'main.js',
+    chunkFilename: '[name].js',
     library: 'lib',
     libraryTarget: 'var'
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: false
+      }
+    }
   }
 })
 

@@ -1,6 +1,6 @@
 {
   "name": "cosmic-link-website",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "The cosmic.link website",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,8 @@
     "email": ""
   },
   "devDependencies": {
+    "@ledgerhq/hw-app-str": "^4.19.0",
+    "@ledgerhq/hw-transport-u2f": "^4.20.0",
     "autoprefixer-cli": "^1.0.0",
     "babel-loader": "^7.1.5",
     "babel-plugin-transform-regenerator": "^6.26.0",
