@@ -1,6 +1,6 @@
 {
   "name": "cosmic-link-website",
-  "version": "0.10.0",
+  "version": "0.10.2",
   "description": "The cosmic.link website",
   "main": "index.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
-    "cosmic-lib": "^0.10.0",
+    "cosmic-lib": "^0.10.1",
     "qrcode": "^1.2.0",
     "standard": "^11.0.1",
     "webpack": "^4.16.2",
