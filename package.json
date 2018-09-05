@@ -1,6 +1,6 @@
 {
   "name": "cosmic-link-website",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "The cosmic.link website",
   "main": "index.js",
   "scripts": {
@@ -22,13 +22,7 @@
   "author": "Mister.Ticot",
   "license": "MIT",
   "repository": "github:MisterTicot/cosmic-link.git",
-  "bug": {
-    "url": "https://github.com/MisterTicot/cosmic-link/issues",
-    "email": ""
-  },
   "devDependencies": {
-    "@ledgerhq/hw-app-str": "^4.19.0",
-    "@ledgerhq/hw-transport-u2f": "^4.20.0",
     "autoprefixer-cli": "^1.0.0",
     "babel-loader": "^7.1.5",
     "babel-plugin-transform-regenerator": "^6.26.0",
@@ -37,6 +31,7 @@
     "cosmic-lib": "^0.11.0",
     "qrcode": "^1.2.2",
     "standard": "^11.0.1",
+    "stellar-ledger-wallet": "^0.2.0",
     "webpack": "^4.16.5",
     "webpack-cli": "^2.1.4"
   },
