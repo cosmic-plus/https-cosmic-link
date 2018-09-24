@@ -506,8 +506,7 @@ select:hover
 	top: 0;
 	max-height: 50%;
 	max-width: 40%;
-	-webkit-filter: grayscale(30%) opacity(70%);
-	        filter: grayscale(30%) opacity(70%);
+	filter: grayscale(30%) opacity(70%);
 	transform: translate(-20%, -20%);
 }
 
@@ -520,6 +519,5 @@ select:hover
 	max-height: 50%;
 	max-width: 40%;
 	margin: auto;
-	-webkit-filter: grayscale(50%) opacity(30%);
-	        filter: grayscale(50%) opacity(30%);
+	filter: grayscale(50%) opacity(30%);
 }
