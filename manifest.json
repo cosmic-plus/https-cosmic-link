@@ -1,7 +1,9 @@
 {
-  "name": "Cosmic.Link",
+  "name": "Cosmic Link",
+  "short_name": "Cosmic Link",
+  "theme_color": "#ffffff",
+  "background_color": "#f0f8ff",
   "display": "browser",
-  "start_url": "/",
   "icons": [
     {
       "src": "icons/192x192.png",
