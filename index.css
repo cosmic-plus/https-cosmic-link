@@ -310,7 +310,6 @@ template {
   border-top: 0.1em solid transparent;
   border-bottom: 0.1em solid #F0F0F0;
   padding: 0 0.1em;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
 
 .cosmiclib_clickable:hover {
@@ -407,24 +406,12 @@ template {
   vertical-align: middle;
   border-radius: 100%;
   background-color: grey;
-  -webkit-animation: animate 1.0s infinite ease-in-out;
   animation: animate 1.0s infinite ease-in-out; }
-
-@-webkit-keyframes animate {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0); }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 0; } }
 
 @keyframes animate {
   0% {
-    -webkit-transform: scale(0);
     transform: scale(0); }
   100% {
-    -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 0; } }
 
@@ -480,7 +467,6 @@ label {
   border-radius: 0.2em;
   overflow: hidden;
   background-color: ghostwhite;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
 
 textarea[readonly],
@@ -574,7 +560,6 @@ header {
   text-overflow: ellipsis;
   font-style: italic;
   color: dimgrey;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease; }
 
 header:hover {
@@ -618,13 +603,11 @@ h3 {
 hr {
   border: 0;
   height: 2px;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), lightgrey, rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), lightgrey, rgba(0, 0, 0, 0)); }
 
 a {
   text-decoration: none;
   color: grey;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease; }
 
 a:hover:not(.selected) {
@@ -692,9 +675,7 @@ nav a.selected {
 #copied {
   position: absolute;
   right: 0;
-  -webkit-transform: translate(-0.1em, 0.3em);
-      -ms-transform: translate(-0.1em, 0.3em);
-          transform: translate(-0.1em, 0.3em);
+  transform: translate(-0.1em, 0.3em);
   box-sizing: border-box;
   width: 4em;
   background-color: ghostwhite;
@@ -710,11 +691,8 @@ nav a.selected {
   max-height: 50%;
   max-width: 40%;
   opacity: 0.7;
-  -webkit-filter: grayscale(30%);
-          filter: grayscale(30%);
-  -webkit-transform: translate(-20%, -20%);
-      -ms-transform: translate(-20%, -20%);
-          transform: translate(-20%, -20%); }
+  filter: grayscale(30%);
+  transform: translate(-20%, -20%); }
 
 #tamper {
   position: fixed;
@@ -724,5 +702,4 @@ nav a.selected {
   bottom: 0;
   right: 0;
   opacity: 0.3;
-  -webkit-filter: grayscale(50%);
-          filter: grayscale(50%); }
+  filter: grayscale(50%); }
