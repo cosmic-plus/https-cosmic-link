@@ -662,14 +662,11 @@ body {
 
 main {
   max-width: 40em;
+  margin: auto;
   padding: 0.5em;
-  overflow: hidden;
-  background-color: white; }
+  overflow: hidden; }
 
 /* Overwrites */
 hr {
   height: 1.25em;
   background: none; }
-
-#redirectionCheckbox + label {
-  display: none; }
