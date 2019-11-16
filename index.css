@@ -654,6 +654,24 @@ input:hover:enabled {
     color: #292929; }
 
 /* Individual elements styling */
+#about h3 {
+  margin-top: 4.2rem; }
+
+#about pre {
+  background: #f6f9ff;
+  color: #607492;
+  padding: 0 1.4em; }
+
+#about ul {
+  list-style-type: none;
+  padding: 0 2.4em; }
+  #about ul li {
+    margin: 0.7em 0; }
+    #about ul li::before {
+      content: "− ";
+      position: absolute;
+      margin-left: -1em; }
+
 #logo {
   z-index: -1;
   position: absolute;
