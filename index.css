@@ -335,8 +335,9 @@ template {
 html {
   box-sizing: border-box;
   vertical-align: middle; }
-  html * {
-    max-height: 100%; }
+
+body > * {
+  max-height: 100%; }
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -463,12 +464,12 @@ html {
     opacity: 0; } }
 
 @font-face {
-  font-family: "Rubik";
-  src: url("./fonts/rubik.ttf"); }
+  font-family: 'Rubik';
+  src: local("Rubik"), local("Rubik-Regular"), url("./fonts/rubik.woff2") format("woff2"), url("./fonts/rubik.woff") format("woff"); }
 
 @font-face {
-  font-family: "Cousine";
-  src: url("./fonts/cousine.ttf"); }
+  font-family: 'Cousine';
+  src: local("Cousine Regular"), local("Cousine-Regular"), url("./fonts/cousine.woff2") format("woff2"), url("./fonts/cousine.woff") format("woff"); }
 
 /* Colors Theme */
 .error {
@@ -482,20 +483,25 @@ html {
 /* Page layout */
 html {
   position: relative;
-  min-height: 100%; }
-
-body {
   height: 100%; }
 
+body {
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100%;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
 header {
-  top: 0;
   max-width: 100%;
   margin: 0.7em; }
 
 main {
   width: 45em;
   max-width: 100%;
-  margin: auto; }
+  margin: 0 auto; }
 
 /* Generic tags definition */
 p {
@@ -526,6 +532,9 @@ a {
   a:hover:not(.selected) {
     cursor: pointer;
     color: #b7c0d1; }
+
+section {
+  padding-bottom: 0.35em; }
 
 /* Cosmic.link header */
 header {
@@ -710,18 +719,27 @@ input:hover:enabled {
   #copied + textarea {
     margin-top: 0; }
 
-#qrCode {
+#qrForm > div {
   background-color: ghostwhite; }
-  #qrCode input {
-    margin: 0; }
-  #qrCode .cosmiclib_loadingAnim {
-    width: 3em;
-    height: 3em;
-    margin: 1em auto;
-    border-width: 0.75em; }
-  #qrCode canvas {
-    margin: auto;
-    padding: 0.3em; }
+
+#qrForm input {
+  margin-bottom: 0; }
+
+#qrForm .cosmiclib_loadingAnim {
+  width: 3em;
+  height: 3em;
+  margin: 1em auto;
+  border-width: 0.75em; }
+
+#qrForm canvas {
+  min-width: 50%;
+  max-width: 100%;
+  height: auto !important;
+  margin: auto;
+  padding: 1em;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated; }
 
 #registerSep7Handler {
   display: table;

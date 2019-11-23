@@ -335,8 +335,9 @@ template {
 html {
   box-sizing: border-box;
   vertical-align: middle; }
-  html * {
-    max-height: 100%; }
+
+body > * {
+  max-height: 100%; }
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -501,6 +502,9 @@ a {
     cursor: pointer;
     color: #b7c0d1; }
 
+section {
+  padding-bottom: 0.35em; }
+
 /* Forms styling */
 form {
   clear: both;
@@ -654,18 +658,27 @@ input:hover:enabled {
   #copied + textarea {
     margin-top: 0; }
 
-#qrCode {
+#qrForm > div {
   background-color: ghostwhite; }
-  #qrCode input {
-    margin: 0; }
-  #qrCode .cosmiclib_loadingAnim {
-    width: 3em;
-    height: 3em;
-    margin: 1em auto;
-    border-width: 0.75em; }
-  #qrCode canvas {
-    margin: auto;
-    padding: 0.3em; }
+
+#qrForm input {
+  margin-bottom: 0; }
+
+#qrForm .cosmiclib_loadingAnim {
+  width: 3em;
+  height: 3em;
+  margin: 1em auto;
+  border-width: 0.75em; }
+
+#qrForm canvas {
+  min-width: 50%;
+  max-width: 100%;
+  height: auto !important;
+  margin: auto;
+  padding: 1em;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated; }
 
 #registerSep7Handler {
   display: table;
@@ -688,13 +701,20 @@ iframe[src$="/u2f-comms.html"] {
   display: none; }
 
 /* Layout style */
+html {
+  height: 100%; }
+
 body {
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100%;
   font-family: Arial, sans-serif;
   color: #292929;
   line-height: 1.4em; }
 
 main {
+  width: 100%;
   max-width: 40em;
   margin: auto;
   padding: 0.5em;
-  overflow: hidden; }
+  overflow-x: hidden; }
