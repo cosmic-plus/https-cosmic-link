@@ -14,6 +14,187 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 2.0.0 - 2020-11-01
+
+### Changed
+
+- Meta: Update dependencies.
+
+## 2.0.0-beta.12 - 2020-09-12
+
+### Changed
+
+- Meta: Update dependencies.
+
+## 2.0.0-beta.11 - 2020-07-25
+
+### Fixed
+
+- UI: Fix unwanted scrolling to bottom.
+
+## 2.0.0-beta.10 - 2020-07-25
+
+### Fixed
+
+- UI: Fix prevent txHandler change after signing transaction.
+- UI: Keep sending/result messages within screen view.
+
+## 2.0.0-beta.9 - 2020-07-21
+
+### Fixed
+
+- UI: Fix a nasty bug that prevented txHandler selection.
+
+## 2.0.0-beta.8 - 2020-07-19
+
+### Changed
+
+- Style: Tweak "copied" tag.
+- UI: Only show signing methods that can sign on the requested network. (thanks
+  [r/stake_pool](https://www.reddit.com/user/stake_pool))
+
+### Fixed
+
+- UI: Fix an out-of-place error message related to "Test Account".
+- UI: Fix an edge case in Keybase account handling.
+- UI: Fix "copied" tag positioning.
+
+## 2.0.0-beta.7 - 2020-07-12
+
+### Added
+
+- UI: Add Keybase-specific signing flow. (Keybase is now the default signing
+  method)
+
+## 2.0.0-beta.6 - 2020-07-08
+
+### Fixed
+
+- UI: Fix SideFrame closing for hardware wallet & test account.
+
+## 2.0.0-beta.5 - 2020-07-08
+
+### Added
+
+- UI: Add "Test Account" signing method.
+- UI: Save network/accountId accross sessions. (CosmicLink v1 feature catchup)
+- UI: Show details for failed transactions. (CosmicLink v1 feature catchup)
+- UI: List signers when relevant. (CosmicLink v1 feature catchup)
+
+### Fixed
+
+- Style: Fix network selector on small screens.
+- UI: Fix "about" tab blinking at loading.
+
+## 2.0.0-beta.4 - 2020-06-21
+
+### Added
+
+- UI: Better handling of the no-transaction case.
+
+### Changed
+
+- UI: Upgrade graphic style.
+
+### Fixed
+
+- UI: Fix a typo.
+
+## 2.0.0-beta.3 - 2020-05-17
+
+### Added
+
+- UI: Add handler "StellarLaboratory (View)".
+
+### Fixed
+
+- Meta: Fix depends.
+- UI: Fix XDR copying.
+- UI: Fix QrCode switcher.
+
+## 2.0.0-beta.2 - 2020-04-26
+
+### Fixed
+
+- UI: Fix anti-tamper robot.
+- UI: Fix 'about' page display.
+
+## 2.0.0-beta.1 - 2020-04-19
+
+This is a rewrite ontop of Kisbox, providing identical features than the latest
+v1.
+
+## 1.21.0 - 2020-09-12
+
+### Changed
+
+- Meta: Update dependencies.
+
+## 1.20.1 - 2020-07-01
+
+### Fixed
+
+- API: Fix decoding of escaped xdrUri.
+
+## 1.20.0 - 2020-05-31
+
+### Changed
+
+- Logic: Support for protocol v13.
+
+## 1.19.0 - 2020-04-26
+
+### Changed
+
+- Logic: Improve transaction feedback.
+
+## 1.18.0 - 2020-04-18
+
+### Changed
+
+- Logic: Update hardware wallets libraries.
+
+## 1.17.0 - 2020-04-11
+
+### Changed
+
+- Data: Update known pubkeys aliases.
+
+## 1.16.0 - 2020-03-28
+
+### Changed
+
+- Logic: Update cosmic-lib to 2.7.0 (SEP29 support).
+
+## 1.15.2 - 2020-02-29
+
+### Fixed
+
+- Logic: Fix a bug that caused XDR generation to fail. When using Cosmic.link
+  for the first time, users sometime faced a "No horizon node for that network"
+  error.
+- UI: Fix a bug that prevented XDR URL update. When users signed an XDR-based
+  request using a hardware wallet, the URL was supposed to get refreshed to
+  include the signature but wasn't. (Thanks [@Tyvdh](https://github.com/tyvdh))
+
+## 1.15.1 - 2020-02-24
+
+### Fixed
+
+- Logic: Fix a case were Trezor signatures were wrong. (Thanks
+  [@Tyvdh](https://github.com/tyvdh))
+
+## 1.15.2 - 2020-02-29
+
+### Fixed
+
+- Logic: Fix a bug that caused XDR generation to fail. When using Cosmic.link
+  for the first time, users sometime faced a "No horizon node for that network"
+  error.
+- UI: Fix a bug that prevented XDR URL update. When users signed an XDR-based
+  request using a hardware wallet, the URL was supposed to get refreshed to
+  include the signature but wasn't. (Thanks [@Tyvdh](https://github.com/tyvdh))
+
 ## 1.15.0 - 2020-01-04
 
 ### Changed
